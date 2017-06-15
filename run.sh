@@ -2,7 +2,12 @@
 
 args="$@"
 
-args="$@ -p 80"
+#Set 80 As default port
+if [ -z ${JSON_SERVER_PORT+x} ]; then
+   JSON_SERVER_PORT=80
+fi
+
+args="$@ -p ${JSON_SERVER_PORT}"
 
 file=/data/db.json
 if [ -f $file ]; then

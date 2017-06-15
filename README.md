@@ -22,6 +22,11 @@ The above example exposes the JSON Server REST API on port 80, so that you can n
 http://localhost/
 ```
 
+Environment Vars:
+
+* `${JSON_SERVER_PORT}` used to defined internal port of json-server (Define to 80 if empty)
+
+
 This is a rather common setup following docker's conventions:
 
 * `-d` will run a detached instance in the background
